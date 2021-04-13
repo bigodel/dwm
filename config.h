@@ -38,6 +38,7 @@ static const Rule rules[] = {
 	{ "Emacs",    NULL,       "calc",     0,            1,           -1 },
 	{ "note",     NULL,       NULL,       0,            1,           -1 },
 	{ "Emacs",    NULL,       "note",     0,            1,           -1 },
+	{ "telegram-desktop", NULL, NULL,     1 << 8,       0,           -1 }, /*9*/
 };
 
 /* layout(s) */
