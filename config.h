@@ -29,6 +29,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
+	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
 	{ "Thunar",   NULL,       NULL,       0,            1,           -1 },
 	{ "Chromium-browser", NULL, NULL,     1 << 3,       0,           -1 }, /*4*/
 	{ "Chromium", NULL,       NULL,       1 << 3,       0,           -1 }, /*4*/
@@ -64,7 +65,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
