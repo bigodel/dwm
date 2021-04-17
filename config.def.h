@@ -30,6 +30,8 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
 	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
+	/* floating picture in picture youtube video */
+	{ "firefox",  "Toolkit", "Picture-in-Picture", 0,   1,           -1 },
 	{ "Thunar",   NULL,       NULL,       0,            1,           -1 },
 	{ "Chromium-browser", NULL, NULL,     1 << 3,       0,           -1 }, /*4*/
 	{ "Chromium", NULL,       NULL,       1 << 3,       0,           -1 }, /*4*/
@@ -39,8 +41,8 @@ static const Rule rules[] = {
 	{ "note",     NULL,       NULL,       0,            1,           -1 },
 	{ "Emacs",    NULL,       "note",     0,            1,           -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 8,       0,           -1 }, /*9*/
-	/* floating picture in picture youtube video */
-	{ "firefox",  "Toolkit", "Picture-in-Picture", 0,   1,           -1 },
+	/* show telegram call floating in all tags */
+	{ "TelegramDesktop", NULL, " ",       ~0,           1,           -1 },
 };
 
 /* layout(s) */
