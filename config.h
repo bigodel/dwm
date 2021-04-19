@@ -42,7 +42,7 @@ static const Rule rules[] = {
 	{ "Emacs",    NULL,       "note",     0,            1,           -1 },
 	{ "TelegramDesktop", NULL, NULL,      1 << 8,       0,           -1 }, /*9*/
 	/* show telegram call floating in all tags */
-	{ "TelegramDesktop", NULL, " ",       ~0,           1,           -1 },
+	{ "TelegramDesktop", NULL, " ",       0,            1,           -1 },
 };
 
 /* layout(s) */
