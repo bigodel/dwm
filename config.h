@@ -40,7 +40,7 @@ static const Rule rules[] = {
 	{ "Emacs",    NULL,       "calc",     0,            1,           -1 },
 	{ "note",     NULL,       NULL,       0,            1,           -1 },
 	{ "Emacs",    NULL,       "note",     0,            1,           -1 },
-	{ "pavucontrol", NULL,    NULL,       0,            1,           -1 },
+	{ "Pavucontrol", NULL,    NULL,       0,            1,           -1 },
 	{ "Zulip",    NULL,       NULL,       1 << 7,       0,           -1 }, /*8*/
 	{ "TelegramDesktop", NULL, NULL,      1 << 8,       0,           -1 }, /*9*/
 	/* show telegram call floating in all tags */
