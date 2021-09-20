@@ -46,6 +46,7 @@ static const Rule rules[] = {
 	/* show telegram call floating in all tags */
 	{ "TelegramDesktop", NULL, " ",       0,            1,           -1 },
 	{ "Nvidia-settings", NULL, NULL,      0,            1,           -1 },
+	{ "Devtools", NULL,        NULL,      0,            1,           -1 },
 };
 
 /* layout(s) */
