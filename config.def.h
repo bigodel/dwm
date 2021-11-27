@@ -26,27 +26,27 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
-	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
+	/* class      instance    title       tags mask     iscentered   isfloating   monitor */
+	{ "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           0,           -1 }, /*3*/
+	{ "firefox",  NULL,       NULL,       1 << 2,       0,           0,           -1 }, /*3*/
 	/* floating picture in picture youtube video */
-	{ "firefox",  "Toolkit", "Picture-in-Picture", 0,   1,           -1 },
-	{ "Thunar",   NULL,       NULL,       0,            1,           -1 },
-	{ "Chromium-browser", NULL, NULL,     1 << 3,       0,           -1 }, /*4*/
-	{ "Chromium", NULL,       NULL,       1 << 3,       0,           -1 }, /*4*/
-	{ "Luakit",   NULL,       NULL,       1 << 3,       0,           -1 }, /*4*/
-	{ "calc",     NULL,       NULL,       0,            1,           -1 },
-	{ "Emacs",    NULL,       "calc",     0,            1,           -1 },
-	{ "note",     NULL,       NULL,       0,            1,           -1 },
-	{ "Emacs",    NULL,       "note",     0,            1,           -1 },
-	{ "Pavucontrol", NULL,    NULL,       0,            1,           -1 },
-	{ "Zulip",    NULL,       NULL,       1 << 7,       0,           -1 }, /*8*/
-	{ "TelegramDesktop", NULL, NULL,      1 << 8,       0,           -1 }, /*9*/
+	{ "firefox",  "Toolkit", "Picture-in-Picture", 0,   0,           1,           -1 },
+	{ "Thunar",   NULL,       NULL,       0,            0,           1,           -1 },
+	{ "Chromium-browser", NULL, NULL,     1 << 3,       0,           0,           -1 }, /*4*/
+	{ "Chromium", NULL,       NULL,       1 << 3,       0,           0,           -1 }, /*4*/
+	{ "Luakit",   NULL,       NULL,       1 << 3,       0,           0,           -1 }, /*4*/
+	{ "calc",     NULL,       NULL,       0,            0,           1,           -1 },
+	{ "Emacs",    NULL,       "calc",     0,            0,           1,           -1 },
+	{ "note",     NULL,       NULL,       0,            0,           1,           -1 },
+	{ "Emacs",    NULL,       "note",     0,            0,           1,           -1 },
+	{ "Pavucontrol", NULL,    NULL,       0,            0,           1,           -1 },
+	{ "Zulip",    NULL,       NULL,       1 << 7,       0,           0,           -1 }, /*8*/
+	{ "TelegramDesktop", NULL, NULL,      1 << 8,       0,           0,           -1 }, /*9*/
 	/* show telegram call floating in all tags */
-	{ "TelegramDesktop", NULL, " ",       0,            1,           -1 },
-	{ "Nvidia-settings", NULL, NULL,      0,            1,           -1 },
-	{ "Devtools", NULL,        NULL,      0,            1,           -1 },
+	{ "TelegramDesktop", NULL, " ",       0,            0,           1,           -1 },
+	{ "Nvidia-settings", NULL, NULL,      0,            0,           1,           -1 },
+	{ "Devtools", NULL,        NULL,      0,            0,           1,           -1 },
 };
 
 /* layout(s) */
