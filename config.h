@@ -30,8 +30,6 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
 	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
-	/* floating picture in picture youtube video */
-	{ "firefox",  "Toolkit", "Picture-in-Picture", 0,   1,           -1 },
 	{ "Thunar",   NULL,       NULL,       0,            1,           -1 },
 	{ "Chromium-browser", NULL, NULL,     1 << 3,       0,           -1 }, /*4*/
 	{ "Chromium", NULL,       NULL,       1 << 3,       0,           -1 }, /*4*/
@@ -40,19 +38,14 @@ static const Rule rules[] = {
 	{ "Emacs",    NULL,       "calc",     0,            1,           -1 },
 	{ "note",     NULL,       NULL,       0,            1,           -1 },
 	{ "Emacs",    NULL,       "note",     0,            1,           -1 },
-	{ "Pavucontrol", NULL,    NULL,       0,            1,           -1 },
-	{ "Zulip",    NULL,       NULL,       1 << 7,       0,           -1 }, /*8*/
-	{ "TelegramDesktop", NULL, NULL,      1 << 8,       0,           -1 }, /*9*/
-	/* show telegram call floating in all tags */
-	{ "TelegramDesktop", NULL, " ",       0,            1,           -1 },
-	{ "Nvidia-settings", NULL, NULL,      0,            1,           -1 },
-	{ "Devtools", NULL,        NULL,      0,            1,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -62,7 +55,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod4Mask
+#define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -132,3 +125,4 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
