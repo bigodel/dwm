@@ -38,34 +38,22 @@ static const Rule rules[] = {
 	{ "Luakit",   NULL,       NULL,       1 << 3,       0,           0,           -1 }, /*4*/
 	{ "calc",     NULL,       NULL,       0,            1,           1,           -1 },
 	{ "Emacs",    NULL,       "calc",     0,            1,           1,           -1 },
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
-	{ "firefox",  NULL,       NULL,       1 << 2,       0,           -1 }, /*3*/
-	/* floating picture in picture youtube video */
-	{ "firefox",  "Toolkit", "Picture-in-Picture", 0,   1,           -1 },
-	{ "Thunar",   NULL,       NULL,       0,            1,           -1 },
-	{ "Chromium-browser", NULL, NULL,     1 << 3,       0,           -1 }, /*4*/
-	{ "Chromium", NULL,       NULL,       1 << 3,       0,           -1 }, /*4*/
-	{ "Luakit",   NULL,       NULL,       1 << 3,       0,           -1 }, /*4*/
-	{ "calc",     NULL,       NULL,       0,            1,           -1 },
-	{ "Emacs",    NULL,       "calc",     0,            1,           -1 },
 	{ "note",     NULL,       NULL,       0,            1,           -1 },
 	{ "Emacs",    NULL,       "note",     0,            1,           -1 },
+	{ "Pavucontrol", NULL,    NULL,       0,            1,           -1 },
+	{ "Zulip",    NULL,       NULL,       1 << 7,       0,           -1 }, /*8*/
 	{ "TelegramDesktop", NULL, NULL,      1 << 8,       0,           -1 }, /*9*/
 	/* show telegram call floating in all tags */
-	{ "TelegramDesktop", NULL, " ",       ~0,           1,           -1 },
-	{ "note",     NULL,       NULL,       0,            1,           1,           -1 },
-	{ "Emacs",    NULL,       "note",     0,            0,           1,           -1 },
-	{ "TelegramDesktop", NULL, NULL,      1 << 8,       0,           0,           -1 }, /*9*/
-	/* show telegram call floating in all tags */
 	{ "TelegramDesktop", NULL, " ",       ~0,           1,           1,           -1 },
+	{ "Nvidia-settings", NULL, NULL,      0,            1,           -1 },
+	{ "Devtools", NULL,        NULL,      0,            1,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -87,7 +75,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-i", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
