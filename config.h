@@ -44,9 +44,7 @@ static const Rule rules[] = {
 	{ "Zulip",    NULL,       NULL,       1 << 7,       0,           0,           -1 }, /*8*/
 	{ "TelegramDesktop", NULL, NULL,      1 << 8,       0,           0,           -1 }, /*9*/
 	/* show telegram call floating in all tags */
-	{ "TelegramDesktop", NULL, " ",       0,            0,           1,           -1 },
-	{ "Nvidia-settings", NULL, NULL,      0,            1,           1,           -1 },
-	{ "Devtools", NULL,        NULL,      0,            0,           1,           -1 },
+	{ "TelegramDesktop", NULL, " ",       ~0,           1,           -1 },
 };
 
 /* layout(s) */
